@@ -1,0 +1,202 @@
+@import 'sass/_settings.sass', 'sass/foundation.sass', 'sass/colors.sass', 'sass/typography.sass', 'sass/marginpadding.sass', 'sass/checkbox.scss', 'sass/social-logos.sass'
+
+body
+    // display: grid
+    // grid-template-rows: auto 1fr
+    height: 100vh
+    margin: 0
+    padding: 0
+
+.main
+    display: grid
+    // grid-template-columns: minmax(480px, 680px) 1fr
+    grid-template-columns: minmax(min-content, max-content) 1fr
+    width: 100vw
+    height: 100vh
+    margin: 0
+    padding: 0
+
+.left-container
+    display: grid
+    grid-template-rows: auto 1fr
+    width: 680px
+    height: 100vh
+    background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%)
+
+nav
+    background-color: white
+    padding: 13px 20px
+    display: flex
+    justify-content: space-between
+
+.form-container
+    // border: 1px solid pink
+    height: auto
+    width: auto
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 20px
+    // padding: 10% 10% 22% 10%
+
+.form
+    margin: 17px 0
+    padding: 15%
+    height: auto
+    // display: flex
+    // flex-direction: column
+
+.email
+    overflow: hidden
+    text-overflow: ellipsis
+
+@media (max-width: $breakpoint-mobile-small)
+    .form-container
+        margin: 0
+        padding: 0
+
+nav
+    display: flex
+    justify-content: space-between
+
+.links
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+ul
+    list-style-type: none
+
+.social-apps
+    display: flex
+    justify-content: center
+    a
+        margin: 0 5px 
+
+// Desktop big:
+@media (min-width: $breakpoint-tablet +1px)
+    // .prevent-growin-by-child
+    //     position: relative
+    //     margin: 47px 0 163px
+
+    // .form-container
+    //     padding: 2% 10% 50% 10%
+
+    // .form
+    //     padding: 80px
+
+    // .email-box
+    //     display: inline-flex
+    //     z-index: 3
+    //     position: absolute
+    //     top: 0px
+    //     left: -40px // -10%
+    //     width: 618px
+
+    // input.email
+    //     padding: 1.5em 18px 1.7em
+
+    // input#image
+    //     padding: 7px
+
+    nav
+        padding: 100px //14.7%
+    
+    .social-apps
+        margin-top: 3em
+        a
+            margin: 0 10px
+
+    
+.background-img
+    background-image: url('assets/images/image_summer.png')
+    background-repeat: no-repeat
+    background-size: cover
+    
+
+@media (max-width: $breakpoint-tablet)
+    .main
+        display: flex
+        justify-content: center
+        align-items: center
+
+    .left-container
+        z-index: 1
+        width: 100vw
+        background: none
+
+    .form
+        max-width: 335px
+        // width: 335px
+        padding: 20px 20px 30px
+        // height: auto
+        background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%)
+
+    .background-img
+        z-index: 0
+        position: absolute
+        top: 0px
+        left: 0px
+        width: 100%
+        height: 100%
+
+@media (max-width: 465px)
+    #logo-letters
+        display: none
+
+.email-box
+    background-color: white
+    border: 1px solid $light 
+    border-left: 4px solid $action 
+    margin-bottom: 22px
+    display: flex
+    justify-content: space-between
+
+
+
+    
+input#image
+    // padding-top: 3px
+
+
+  
+// original file:
+
+// .App {
+//   text-align: center;
+// }
+
+// .App-logo {
+//   height: 40vmin;
+//   pointer-events: none;
+// }
+
+// @media (prefers-reduced-motion: no-preference) {
+//   .App-logo {
+//     animation: App-logo-spin infinite 20s linear;
+//   }
+// }
+
+// .App-header {
+//   background-color: #282c34;
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: calc(10px + 2vmin);
+//   color: white;
+// }
+
+// .App-link {
+//   color: #61dafb;
+// }
+
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }

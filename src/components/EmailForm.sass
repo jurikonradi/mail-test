@@ -1,0 +1,52 @@
+import arrowIcon from './../assets/images/ic_arrow.svg'
+    
+.EmailForm
+    .prevent-growin-by-child
+        position: relative
+        margin: 47px 0 163px
+        display: flow-root
+        border: 1px solid white
+
+        form:hover
+            box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06) 
+
+        input.email:hover
+            box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06) 
+            
+        input#image:active
+            
+        input#image
+            border: none
+            background-image: url('{arrowIcon}')
+            background-repeat: no-repeat
+            background-size: cover
+            height: 58px
+
+        input.email
+            margin-left: 20px
+
+    @media (min-width: $breakpoint-tablet +1px)
+        .prevent-growin-by-child
+            position: relative
+            margin: 47px 0 163px
+
+        .form-container
+            padding: 2% 10% 50% 10%
+
+        .form
+            padding: 80px
+
+        .email-box
+            display: inline-flex
+            z-index: 3
+            position: absolute
+            top: 0px
+            left: -40px // -10%
+            width: 618px
+
+        input.email
+            padding: 1.5em 18px 1.7em
+
+        input#image
+            padding: 7px
+
