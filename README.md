@@ -1,4 +1,4 @@
-Task1-HTML/CSS
+# Task1-HTML/CSS
 
 Create an HTML/CSS page based on the design provided below.
 In this task, you must show your knowledge of HTML standards and proper structure. We will also test your skills on writing rendering efficient CSS.
@@ -20,7 +20,8 @@ Design:
 - Design link on Figma (https://www.figma.com/file/p4jxR7jTYFqSaVewJTsHFj/Mid%2FJunior---Web-Developer-Test-%7C-Task-1?node-id=15%3A34)
 - Style guide link on Figma
 
-Task 2 - JavaScript
+
+# Task 2 - JavaScript
 
 Based on Task 1 you have to create subscription input validation.
 In this task, you must show your knowledge about writing fast and memory-efficient JavaScript.
