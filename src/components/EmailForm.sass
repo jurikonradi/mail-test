@@ -1,52 +1,133 @@
-import arrowIcon from './../assets/images/ic_arrow.svg'
-    
-.EmailForm
+@import './../sass/_settings.sass' , './../sass/_colors.sass', './../sass/_checkbox.scss'
+
+// All (any size)
+.form-container
+    display: grid
+    grid-template-rows: 0.6fr 2fr 1fr
+
+.filler
+    // border: 1px solid pink
+
+// iPhone SE
+@media (min-width: $breakpoint-mobile-small)
+    .form
+        display: grid
+        grid-template-rows: repeat(6, 1fr)
+        max-height: 460px
+        margin: 0 auto
+        padding: 10px
+        background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%)
+
+    .prevent-growin-by-child
+        margin: 23px 0 20px;
+        position: initial
+
+    .email-box
+        background-color: white
+        border: 1px solid $light 
+        border-left: 4px solid $action 
+        margin-bottom: 22px
+        display: flex
+        justify-content: space-between
+
+    .email-box:hover
+        box-shadow: 0px 30px 40px rgba(9, 12, 16, 0.06)
+        border: 1px solid $hover
+        border-left: 4px solid $action 
+
+    input.email
+        margin-left: 12px
+        border: none
+
+    .terms
+        margin: 30px 0 30px
+
+// // iPhone 8 Plus
+@media (min-width: $breakpoint-mobile)
+    .form
+        max-width: 335px
+        // margin: 50px auto
+        padding: 6%         
+
+
+// Tablet+
+@media (min-width: $breakpoint-tablet)
+    .form
+        padding: 0 8%
+
+    .prevent-growin-by-child
+        // position: relative
+        // margin: 35px 0 120px
+        // display: flow-root
+
+    input.email
+        padding: 1.5em 18px 1.7em
+
+    input#image
+        padding: 7px
+
+// Desktop
+@media (min-width: $breakpoint-desktop)
+    .form-container
+        grid-template-rows: 0.3fr 1fr 0.6fr
+        padding: 0
+
+    .form
+        margin: 0
+        padding: 0 19%
+        height: auto
+        background: none
+
     .prevent-growin-by-child
         position: relative
-        margin: 47px 0 163px
-        display: flow-root
-        border: 1px solid white
+        margin: 15px 0 80px
+        // border: 1px solid white
 
-        form:hover
-            box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06) 
+    .email-box
+        display: inline-flex
+        z-index: 3
+        position: absolute
+        top: 0px
+        width: 533px
+        left: -40px // -10%
 
-        input.email:hover
-            box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06) 
-            
-        input#image:active
-            
-        input#image
-            border: none
-            background-image: url('{arrowIcon}')
-            background-repeat: no-repeat
-            background-size: cover
-            height: 58px
+    .email-box:hover
+        box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06)
 
-        input.email
-            margin-left: 20px
+    .email
+        overflow: hidden
+        text-overflow: ellipsis
 
-    @media (min-width: $breakpoint-tablet +1px)
-        .prevent-growin-by-child
-            position: relative
-            margin: 47px 0 163px
+    input.email
+        margin-left: 20px
+        border: none
 
-        .form-container
-            padding: 2% 10% 50% 10%
+    input#image
+        border: 0 solid black
+        // border: none
+        // background-image: url('./../assets/images/ic_arrow.svg')
+        background-repeat: no-repeat
+        background-size: cover
+        height: 58px
 
-        .form
-            padding: 80px
+// Desktop HD
+@media (min-width: $breakpoint-desktop-hd)
+    .form-container
+        grid-template-rows: .5fr 1fr 1fr
 
-        .email-box
-            display: inline-flex
-            z-index: 3
-            position: absolute
-            top: 0px
-            left: -40px // -10%
-            width: 618px
+    .form
+        padding: 0 21%
+        max-width: 420px
 
-        input.email
-            padding: 1.5em 18px 1.7em
+    .email-box
+        width: 618px
 
-        input#image
-            padding: 7px
+    .terms
+        margin-bottom: 50px
+        
+
+
+
+// input#image:focus
+//     outline: 0
 

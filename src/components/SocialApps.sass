@@ -1,3 +1,24 @@
+@import './../sass/_settings.sass'
+// , './../sass/foundation.sass', './../sass/colors.sass', './../sass/typography.sass', './../sass/marginpadding.sass'
+    
+.social-apps
+    display: flex
+    justify-content: center
+    a
+        margin: 0 5px
+
+// iPhone SE
+// @media (min-width: $breakpoint-mobile-small)
+//     .social-apps
+        // margin-bottom: 15px
+
+// Desktop
+@media (min-width: $breakpoint-desktop)
+    .social-apps
+        margin-top: 40px
+        a
+            margin: 0 10px
+
 .facebook-logo 
     display: block
     width: 46px
