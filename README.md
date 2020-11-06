@@ -1,71 +1,44 @@
-# Getting Started with Create React App
+# Task1-HTML/CSS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Create an HTML/CSS page based on the design provided below.
+In this task, you must show your knowledge of HTML standards and proper structure. We will also test your skills on writing rendering efficient CSS.
 
-## Available Scripts
+Requirements:
+- The page is as pixel-perfect as possible. You can use ​this​ Chrome extension to test it.
+- Bootstrap or similar frameworks are not used.
+- The page is responsive for all devices.
+- All URL's on-page is “#”. They do not lead anywhere.
+- The form submission functionality is not part of Task 1.
+- Social icons have hover effects as per style guides.
+- Hover effects are present on the site as per style guides.
 
-In the project directory, you can run:
+Advantages:
+- A font with custom icons is used instead of separate icon files.
+- LESS, SASS or any other CSS preprocessor is used.
 
-### `npm start`
+Design:
+- Design link on Figma (https://www.figma.com/file/p4jxR7jTYFqSaVewJTsHFj/Mid%2FJunior---Web-Developer-Test-%7C-Task-1?node-id=15%3A34)
+- Style guide link on Figma
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Task 2 - JavaScript
 
-### `npm test`
+Based on Task 1 you have to create subscription input validation.
+In this task, you must show your knowledge about writing fast and memory-efficient JavaScript.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Requirements:
+- There is an error message under input that shows validation messages if:
+- Invalid email is added - “Please provide a valid e-mail address”
+- The checkbox is not marked - “You must accept the terms and conditions”
+- No email address is provided - “Email address is required”
+- Provided email is ending with .co - “We are not accepting subscriptions from Colombia
+emails”.
+- Once validation has passed, the error disappears.
+- The button is disabled if the form is not valid.
+- On successful validation, a success message appears in the place of the form, as per design.
+A
+dvantages:
+- You can use Vue.Js, React or similar technologies.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# mail-test
+Design:
+- Design link on Figma (https://www.figma.com/file/p4jxR7jTYFqSaVewJTsHFj/Mid%2FJunior---Web-Developer-Test-%7C-Task-1?node-id=15%3A34)
