@@ -1,7 +1,19 @@
-@import './../sass/_colors.sass'
+@import './../sass/_colors.sass',  './../sass/_settings'
     
-.ErrorMessage
+.error-message
     color: $error
-    // border: solid 1px $error-light
-    // padding: 15px 20px 18px
-    // clear: both
+
+// Tablet+
+@media (min-width: $breakpoint-tablet)
+    .error-message
+        margin: 0 0 27px
+
+// Desktop
+@media (min-width: $breakpoint-desktop)
+    .error-message
+        margin: 0 0 28px
+
+// Desktop HD
+@media (min-width: $breakpoint-desktop-hd)
+    .error-message
+        margin: 0 0 32px

@@ -8,16 +8,22 @@ import pineappleLogoLetters from './assets/images/pineapple..svg';
 
 import EmailForm from './components/EmailForm';
 import SuccessMsg from './components/SuccessMsg';
-// import SocialApps from './components/SocialApps';
-
-
 
 function App() {
 
-  const [formIsSubmitted, setFormIsSubmitted] = useState(false);
-  const changeFormState = () => {
-    formIsSubmitted ? setFormIsSubmitted(false) : setFormIsSubmitted(true);
-  }
+  const [formIsSubmitted, setFormIsSubmitted] = useState({
+    submitted: false,
+    email: ''
+  });
+  const changeFormState = (argEmail) => {
+    formIsSubmitted.submitted ? setFormIsSubmitted({
+        submitted: false,
+        email: argEmail }) 
+    : setFormIsSubmitted({
+        submitted: true,
+        email: argEmail
+    });
+  };
 
   return (
     <div className='main'>
@@ -42,7 +48,15 @@ function App() {
         </nav>
         <div className='form-container'>
           <div className='filler'></div>
-          {!formIsSubmitted ? <EmailForm stateChanger={changeFormState} /> : <SuccessMsg stateChanger={changeFormState} />}
+          { !formIsSubmitted.submitted ? 
+            <EmailForm 
+              stateChangeFunc={ changeFormState}
+              
+              /> 
+            : <SuccessMsg 
+            
+              email={formIsSubmitted.email}
+              /> }
           <div className='filler'></div>
         </div>
       </div>

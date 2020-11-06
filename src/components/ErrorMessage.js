@@ -5,7 +5,7 @@ import './ErrorMessage.sass';
 function ErrorMessage(props) {
     return (
         <div>
-            <p className="ErrorMessage">{props.message}</p>
+            <p className="error-message">{props.message}</p>
         </div>
     );
 };

@@ -1,5 +1,4 @@
 @import './../sass/_settings.sass'
-// , './../sass/foundation.sass', './../sass/colors.sass', './../sass/typography.sass', './../sass/marginpadding.sass'
     
 .social-apps
     display: flex
@@ -8,14 +7,23 @@
         margin: 0 5px
 
 // iPhone SE
-// @media (min-width: $breakpoint-mobile-small)
-//     .social-apps
-        // margin-bottom: 15px
+.social-apps
+    padding: 20px 0 12px;
+
+// // iPhone 8 Plus
+@media (min-width: $breakpoint-mobile)
+    .social-apps
+        padding: 27px 0 12px
+
+// Tablet+
+@media (min-width: $breakpoint-tablet)
+    .social-apps
+        padding: 25px 0 57px
 
 // Desktop
 @media (min-width: $breakpoint-desktop)
     .social-apps
-        margin-top: 40px
+        margin-top: 7px
         a
             margin: 0 10px
 
@@ -23,7 +31,6 @@
     display: block
     width: 46px
     height: 46px
-    //background-repeat: no-repeat
     background: url('../assets/images/fb-normal.svg')
 .facebook-logo:hover
     background: url('../assets/images/fb-2.svg')
@@ -34,7 +41,6 @@
     display: block
     width: 46px
     height: 46px
-    //background-repeat: no-repeat
     background: url('../assets/images/insta-normal.svg')
 .insta-logo:hover
     background: url('../assets/images/insta-2.svg')
@@ -45,7 +51,6 @@
     display: block
     width: 46px
     height: 46px
-    //background-repeat: no-repeat
     background: url('../assets/images/twitter-normal.svg')
 .twitter-logo:hover
     background: url('../assets/images/twitter-2.svg')
@@ -56,7 +61,6 @@
     display: block
     width: 46px
     height: 46px
-    //background-repeat: no-repeat
     background: url('../assets/images/youtube-normal.svg')
 .youtube-logo:hover
     background: url('../assets/images/youtube-2.svg')

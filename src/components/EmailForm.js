@@ -15,10 +15,11 @@ const prohibitedTlds = {
 function EmailForm(props) {
     const [formState, setFormState] = useState({
         email: '',
+        email2: '',
         terms: false,
         errorMessage: ''
     });
-    // const userEmailInput = React.createRef();
+
     function handleChange(event) {
         const value =
             event.target.type === 'checkbox' ?
@@ -27,24 +28,35 @@ function EmailForm(props) {
             ...formState,
             [event.target.name]: value
         });
-        console.log('handleChange: ', formState);
-    };.
+    };
+
+    let resultEmail = '';
 
     function handleSubmit(event) {
         event.preventDefault();
 
+        // formState.email - mobile input
+        // formState.email2 - desktop input
+        if (formState.email2 !== '') {
+            resultEmail = formState.email2;
+        } else if (formState.email !== '') {
+            resultEmail = formState.email;
+        }
+        console.log('resultEmail: ', resultEmail);
 
-        if (formState.email === '') {
+        console.log(formState);
+
+        if (emailTldExtractor(resultEmail) === '') {
             setFormState({
                 ...formState,
                 errorMessage: 'Please provide a valid e-mail address.'
             });
-        } else if (formState.email === prohibitedTlds.topLevelDomain) {
+        } else if (emailTldExtractor(resultEmail) === prohibitedTlds.topLevelDomain) {
             setFormState({
                 ...formState,
                 errorMessage: 'We are not accepting subscriptions from ' + prohibitedTlds.country + ' emails.'
             });
-        } else if (formState.terms == false) {
+        } else if (formState.terms === false) {
             setFormState({
                 ...formState,
                 errorMessage: 'You must accept the terms and conditions.'
@@ -54,37 +66,9 @@ function EmailForm(props) {
                 ...formState,
                 errorMessage: ''
             });
-            props.stateChanger();
+            props.stateChangeFunc(resultEmail);
         };
-
-        // if (formState.terms === false) {
-        //     setFormState(formState.errorMessage = 'You must accept the terms and conditions.');
-
-        // } else if (formState.email === '') {
-        //     setFormState(formState.errorMessage = 'Please provide a valid e-mail address.');
-        // } else if (formState.email === prohibitedTlds.topLevelDomain) {
-        //     setFormState(formState.errorMessage = 'We are not accepting subscriptions from ' + prohibitedTlds.country + ' emails.');
-        // } else {
-        //     setFormState(formState.errorMessage = '');
-        //     props.stateChanger();
-        // }
-
-        // if (emailTldExtractor(formState.email) === '') {
-        //     setFormState(formState.errorMessage = 'Please provide a valid e-mail address.');
-        // } else {
-        //     if (emailTldExtractor(formState.email) === prohibitedTlds.topLevelDomain) {
-        //         setFormState(formState.errorMessage = 'We are not accepting subscriptions from ' + prohibitedTlds.country + ' emails.');
-        //         console.log( formState.errorMessage );
-        //     } else {
-        //         setFormState(formState.errorMessage = "");
-        //         props.stateChanger();
-        //     };
-        // }
-
-        console.log('handleSubmit: ',formState);
-        alert('email: ' + formState.email + ', terms: ' + formState.terms + ', errorMessage: ' + formState.errorMessage);
     }
-
 
     return (
         <div className='form'>
@@ -97,14 +81,24 @@ function EmailForm(props) {
                     onSubmit={handleSubmit} className='email-box'
                 >
                     <input
+                        className='email'
                         type="email"
                         name='email'
-                        vaue={formState.email}
+                        value={formState.email}
                         onChange={handleChange}
-                        className='email'
-                        size='20'
-                        placeholder="Type your email address here..."
-                        required
+                        size='17'
+                        placeholder="Your email"
+                        
+                    />
+                    <input
+                        className='email-desktop'
+                        type="email"
+                        name='email2'
+                        value={formState.email2}
+                        onChange={handleChange}
+                        size='40'
+                        placeholder="Your email"
+                        
                     />
                     <input type="image" id="image" alt="Submit"
                         src={arrowIcon}
@@ -122,6 +116,7 @@ function EmailForm(props) {
                     <span className="checkmark"></span>
                 </label>
             </div>
+
             {formState.errorMessage && <ErrorMessage message={formState.errorMessage} />}
 
             <SocialApps />
@@ -130,5 +125,3 @@ function EmailForm(props) {
 };
 
 export default EmailForm;
-
-//ref={userEmailInput}

@@ -1,4 +1,4 @@
-@import 'sass/settings', 'sass/foundation', 'sass/colors', 'sass/typography', 'sass/marginpadding'
+@import 'sass/settings', 'sass/colors', 'sass/typography', 'sass/marginpadding'
 
 // All (any size)
 body
@@ -43,8 +43,6 @@ ul
     width: 100%
     height: 100%
 
-
-
 // iPhone SE
 // @media (min-width: $breakpoint-mobile-small)
 
@@ -52,9 +50,6 @@ ul
 @media (min-width: $breakpoint-mobile)
     nav
         padding: 13px 10%
-         
-    // .form-container
-    //     padding: 30px
 
 @media (max-width: 495px)
     #logo-letters
@@ -63,19 +58,13 @@ ul
 //Tablet+
 @media (min-width: $breakpoint-tablet)
     nav
-        padding: 13px 14% 0
-
-    // .form-container
-    //     padding: 2% 10% 50% 10%
-
-
+        padding: 13px 14% 20px
 
 // Desktop
 @media (min-width: $breakpoint-desktop)
     .main
         display: grid
-        grid-template-columns: minmax(480px, 560px) 1fr
-        // grid-template-columns: minmax(min-content, max-content) 1fr
+        grid-template-columns: minmax(450px, 500px) 1fr
         width: 100vw
         height: 100vh
         margin: 0
@@ -91,6 +80,11 @@ ul
         padding: 10% 12% 0
         background: none
 
+    ul.links
+        padding: 0
+        li
+            padding: 0 .5em
+
     .background-img
         position: initial
         background-position: bottom
@@ -105,3 +99,7 @@ ul
 
     nav
         padding: 10% 15% 0
+
+    ul.links
+        li
+            padding: 0 1em
