@@ -1,6 +1,7 @@
 ## Application structure: 
 src/components - React components (javascript).
 src/sass - stylesheets.
+src/utils - javascript function to extract TDL from emal adress.
 
 
 # Task1-HTML/CSS
