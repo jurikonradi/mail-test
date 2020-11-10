@@ -1,6 +1,6 @@
 ## Application structure: 
-src/components - React components (javascript)
-src/sass - stylesheets
+src/components - React components (javascript).
+src/sass - stylesheets.
 
 
 # Task1-HTML/CSS
