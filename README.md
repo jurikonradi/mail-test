@@ -1,3 +1,8 @@
+## Application structure: 
+src/components - React components (javascript)
+src/sass - stylesheets
+
+
 # Task1-HTML/CSS
 
 Create an HTML/CSS page based on the design provided below.
