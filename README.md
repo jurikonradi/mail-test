@@ -1,3 +1,6 @@
+## Live demo
+[demo](http://yurikonradi.izziwebstudio.com/code-examples/form-verification/index.html)
+
 ## Application structure: 
 - src/components - React components (javascript).
 - src/sass - stylesheets.
