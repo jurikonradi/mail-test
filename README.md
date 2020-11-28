@@ -7,7 +7,7 @@
 - src/utils - javascript function to extract TDL from emal adress.
 
 
-# Form vaidation, made with React, Sass
+# Form validation, made with React, Sass
 
 Requirements:
 - Error messages:
